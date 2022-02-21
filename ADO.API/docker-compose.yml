@@ -1,0 +1,22 @@
+﻿version: '3.8'
+services:
+  database:
+    container_name: 'mssql'
+    image: 'mcr.microsoft.com/mssql/server:2019-CU13-ubuntu-20.04'
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Secret1234
+    ports:
+      - "1433:1433"
+    volumes:
+      - 'sqlvolume:/var/opt/mssql'
+    restart: unless-stopped
+  db-init:
+    image: mcr.microsoft.com/mssql-tools
+    depends_on:
+      - database
+    links:
+      - database
+    command: /opt/mssql-tools/bin/sqlcmd -S database -U SA -P Secret1234 -Q 'CREATE DATABASE test;'
+volumes:
+  sqlvolume: {}
