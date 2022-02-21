@@ -1,11 +1,17 @@
 ﻿<Properties StartupConfiguration="{4EEEFFC1-082F-4720-BD6D-0AC5CEDCD23A}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ADO.API/Repositories/BaseRepository.cs">
+    <Files>
+      <File FileName="ADO.API/Models/AdoDbCOntext.cs" Line="9" Column="10" />
+      <File FileName="ADO.API/Repositories/BaseRepository.cs" Line="9" Column="3" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ADO" expanded="True">
             <Node name="ADO.API" expanded="True">
-              <Node name="docker-compose.yml" selected="True" />
+              <Node name="Repositories" expanded="True">
+                <Node name="BaseRepository.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
