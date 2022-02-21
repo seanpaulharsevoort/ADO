@@ -1,5 +1,7 @@
 ﻿using System;
 using ADO.API.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace ADO.API.Repositories
 {
 	public class BaseRepository
@@ -10,5 +12,7 @@ namespace ADO.API.Repositories
 		{
 			this._dbContext = dbContext;
 		}
+
+
 	}
 }
